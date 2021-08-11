@@ -15,7 +15,7 @@ const messaging = firebase.messaging();
 export const configureNotifications = () => {
     Notification.requestPermission()
         .then(permission => {
-            console.log(permission);
+            console.log("Permission,", permission);
             if (permission === "granted") {
                 messaging.getToken().then(currToken => {
                     if (currToken) {
@@ -30,7 +30,3 @@ export const configureNotifications = () => {
             console.log('An error while the token is bein retreived', e);
         })
 }
-
-messaging.onMessage(function (payload) {
-    console.log('onMessage ', payload);
-})

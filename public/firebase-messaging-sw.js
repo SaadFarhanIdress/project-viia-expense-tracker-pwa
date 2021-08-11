@@ -8,15 +8,7 @@ const firebaseConfig = {
     storageBucket: "expense-tracker-69475.appspot.com",
     messagingSenderId: "291589673680",
     appId: "1:291589673680:web:63958fb909ad9bfe14c4d5"
-};
+  };
 
 firebase.initializeApp(firebaseConfig);
-const messaging = firebase.messaging();
-
-messaging.setBackgroundMessageHandler(function (payload) {
-    const title = "Hello world!";
-    const options = {
-        body: payload.data.status
-    }
-    return self.registration.showNotification(title, options);
-})
+firebase.messaging();
