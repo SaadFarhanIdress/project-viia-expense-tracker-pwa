@@ -1,12 +1,12 @@
 import firebase from 'firebase';
 
 const firebaseConfig = {
-    apiKey: "AIzaSyDa1mi9eC1U7ah3I7bWYboqYES6wabzRBQ",
-    authDomain: "notification-app-32265.firebaseapp.com",
-    projectId: "notification-app-32265",
-    storageBucket: "notification-app-32265.appspot.com",
-    messagingSenderId: "729218370356",
-    appId: "1:729218370356:web:95e806cb53ff79d1893361"
+    apiKey: "AIzaSyDvHAsb6bC98hnE72_N6QyfYLA-KPBYDpE",
+    authDomain: "expense-tracker-69475.firebaseapp.com",
+    projectId: "expense-tracker-69475",
+    storageBucket: "expense-tracker-69475.appspot.com",
+    messagingSenderId: "291589673680",
+    appId: "1:291589673680:web:63958fb909ad9bfe14c4d5"
 };
 
 firebase.initializeApp(firebaseConfig)
@@ -31,6 +31,6 @@ export const configureNotifications = () => {
         })
 }
 
-messaging.onMessage(function(payload) {
+messaging.onMessage(function (payload) {
     console.log('onMessage ', payload);
 })
